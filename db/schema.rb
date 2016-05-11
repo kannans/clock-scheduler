@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511170954) do
+ActiveRecord::Schema.define(version: 20160511194647) do
 
   create_table "job_schedulers", force: :cascade do |t|
     t.datetime "event_at"
     t.integer  "frequency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "task"
   end
 
   create_table "projects", force: :cascade do |t|

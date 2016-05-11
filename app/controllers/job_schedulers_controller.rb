@@ -72,6 +72,6 @@ class JobSchedulersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_scheduler_params
-      params.require(:job_scheduler).permit(:event_at, :frequency)
+      params.require(:job_scheduler).permit(:event_at, :frequency, :task)
     end
 end

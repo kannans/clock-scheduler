@@ -16,6 +16,10 @@
     <%= f.datetime_select :event_at %>
   </div>
   <div class="field">
+    <%= f.label :task %><br>
+    <%= f.text_field :task %>
+  </div>
+  <div class="field">
     <%= f.label :frequency %><br>
     <%= f.select :frequency, options_for_select(JobScheduler.frequencies.map{|x, v| [x, x]}) %>
   </div>
