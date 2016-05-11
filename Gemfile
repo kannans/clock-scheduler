@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "puma"
 gem 'whenever', require: false
 
+gem 'clockwork'
+
+
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
