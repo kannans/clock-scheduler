@@ -19,9 +19,6 @@ module Clockwork
   # every(10.seconds, 'frequent.job')
   # every(3.minutes, 'less.frequent.job')
   # every(1.hour, 'hourly.job')
-
-  # JobScheduler.all.each do |job|
-    every(5.minutes, 'project_create.job')
-    every(10.minutes, 'project_destroy.job')
-  # end
+  every(5.minutes, 'project_create.job')
+  every(10.minutes, 'project_destroy.job')
 end
