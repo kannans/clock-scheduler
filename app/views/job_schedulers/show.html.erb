@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event at:</strong>
+  <%= @job_scheduler.event_at %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @job_scheduler.frequency %>
+</p>
+
+<%= link_to 'Edit', edit_job_scheduler_path(@job_scheduler) %> |
+<%= link_to 'Back', job_schedulers_path %>

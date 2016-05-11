@@ -1,0 +1,25 @@
+<%= form_for(@job_scheduler) do |f| %>
+  <% if @job_scheduler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job_scheduler.errors.count, "error") %> prohibited this job_scheduler from being saved:</h2>
+
+      <ul>
+      <% @job_scheduler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_at %><br>
+    <%= f.datetime_select :event_at %>
+  </div>
+  <div class="field">
+    <%= f.label :frequency %><br>
+    <%= f.select :frequency, options_for_select(JobScheduler.frequencies.map{|x, v| [x, x]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
