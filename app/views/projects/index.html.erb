@@ -5,14 +5,16 @@
 <table>
   <thead>
     <tr>
+      <th>No</th>
       <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @projects.each do |project| %>
+    <% @projects.each_with_index do |project, i| %>
       <tr>
+        <td><%= i %></td>
         <td><%= project.name %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>

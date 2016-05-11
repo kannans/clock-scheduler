@@ -8,7 +8,12 @@ module Clockwork
 
   handler do |job|
     puts "Running #{job} - #{Time.now}"
-    Project.create_data
+    case job
+    when "project_create.job"
+      Project.create_data
+    when "project_destroy.job"
+      Project.destroy_data
+    end
   end
 
   # every(10.seconds, 'frequent.job')
@@ -16,6 +21,7 @@ module Clockwork
   # every(1.hour, 'hourly.job')
 
   # JobScheduler.all.each do |job|
-    every(1.minutes, 'project.job')
+    every(5.minutes, 'project_create.job')
+    every(10.minutes, 'project_destroy.job')
   # end
 end
