@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
 
   def self.create_data
-    10.times do |x|
+    2.times do |x|
       create(name: "Project#{x}")
     end
   end

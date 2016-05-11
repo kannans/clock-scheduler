@@ -1,2 +1,2 @@
 web: bundle exec puma -C config/puma.rb
-clock: bundle exec clockwork config/clock.rb
+clock: RAILS_ENV=production bundle exec clockwork config/clock.rb
