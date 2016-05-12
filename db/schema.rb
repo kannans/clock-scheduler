@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511194647) do
+ActiveRecord::Schema.define(version: 20160512070615) do
+
+  create_table "clockwork_database_events", force: :cascade do |t|
+    t.integer  "frequency_quantity"
+    t.integer  "frequency_period_id"
+    t.string   "at"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "clockwork_database_events", ["frequency_period_id"], name: "index_clockwork_database_events_on_frequency_period_id"
+
+  create_table "frequency_periods", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "job_schedulers", force: :cascade do |t|
     t.datetime "event_at"
