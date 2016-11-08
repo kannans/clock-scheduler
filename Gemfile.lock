@@ -172,7 +172,7 @@ DEPENDENCIES
   pg
   puma
   rails (= 4.2.6)
-  rubocop
+  rubocop (~> 0.45.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

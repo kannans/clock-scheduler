@@ -19,7 +19,7 @@ gem 'clockwork'
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.45.0', require: false
 end
 
 group :development do
