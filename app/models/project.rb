@@ -1,6 +1,6 @@
-class Project < ActiveRecord::Base
 
-  def self.create_data
+class Project < ActiveRecord::Base
+     def self.create_data
     10.times do |x|
       create(name: "Project#{x}")
     end
